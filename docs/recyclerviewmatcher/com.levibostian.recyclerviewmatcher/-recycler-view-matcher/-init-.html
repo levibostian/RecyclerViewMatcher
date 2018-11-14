@@ -1,0 +1,19 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>RecyclerViewMatcher.<init> - recyclerviewmatcher</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">recyclerviewmatcher</a>&nbsp;/&nbsp;<a href="../index.html">com.levibostian.recyclerviewmatcher</a>&nbsp;/&nbsp;<a href="index.html">RecyclerViewMatcher</a>&nbsp;/&nbsp;<a href="./-init-.html">&lt;init&gt;</a><br/>
+<br/>
+<h1>&lt;init&gt;</h1>
+<a name="com.levibostian.recyclerviewmatcher.RecyclerViewMatcher$&lt;init&gt;(kotlin.Int)"></a>
+<code><span class="identifier">RecyclerViewMatcher</span><span class="symbol">(</span><span class="identifier">@IdRes</span> <span class="identifier" id="com.levibostian.recyclerviewmatcher.RecyclerViewMatcher$<init>(kotlin.Int)/recyclerViewId">recyclerViewId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span></code>
+<p>Object used to obtain a <a href="#">Matcher</a> for a <a href="#">RecyclerView.ViewHolder.itemView</a> or a specific <a href="https://developer.android.com/reference/android/view/View.html">View</a> inside of a <a href="#">RecyclerView.ViewHolder.itemView</a>.</p>
+<p>Example code to click on a button in the first row of the <a href="#">RecyclerView</a>:</p>
+<pre><code>onView(RecyclerViewMatcher.recyclerViewWithId(R.id.recyclerview).viewHolderViewAtPosition(0, R.id.adapter_button))
+  .perform(click())
+</code></pre>
+</BODY>
+</HTML>

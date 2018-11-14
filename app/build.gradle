@@ -1,18 +1,17 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
+
     defaultConfig {
         applicationId "com.levibostian.recyclerviewmatcherexample"
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -25,9 +24,25 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    // Support libraries
+    implementation "androidx.appcompat:appcompat:1.0.2"
+    implementation "androidx.recyclerview:recyclerview:1.0.0"
+
+    androidTestImplementation project(':recyclerviewmatcher')
+
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // Android Testing Support Library's runner and rules
+    def androidTestLibVersion = "1.1.0"
+    androidTestImplementation "androidx.test:runner:$androidTestLibVersion"
+    androidTestImplementation "androidx.test:rules:$androidTestLibVersion"
+    androidTestImplementation "androidx.test.ext:junit:1.0.0"
+    androidTestImplementation "androidx.test.ext:truth:1.0.0"
+    androidTestImplementation "com.google.truth:truth:0.42"
+
+    // Espresso UI Testing
+    def espressoVersion = "3.1.0"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
 }
