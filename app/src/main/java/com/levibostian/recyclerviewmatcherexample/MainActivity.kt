@@ -3,14 +3,17 @@ package com.levibostian.recyclerviewmatcherexample
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import com.levibostian.recyclerviewmatcherexample.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 
     override fun onStart() {
@@ -22,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             "battlestar galactica"
         )
 
-        act_main_recyclerview.apply {
+        binding.actMainRecyclerview.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = MainRecyclerViewAdapter(data)
         }

@@ -3,11 +3,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'org.jetbrains.dokka-android'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -31,16 +31,7 @@ dokka {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation "androidx.recyclerview:recyclerview:1.0.0"
-    testImplementation 'junit:junit:4.12'
-
-    // Android Testing Support Library
-    def androidTestLibVersion = "1.1.0"
-    implementation "androidx.test:rules:$androidTestLibVersion"
+    implementation "androidx.recyclerview:recyclerview:1.2.0"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-}
-
-repositories {
-    mavenCentral()
 }

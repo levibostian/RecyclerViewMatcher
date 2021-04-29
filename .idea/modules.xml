@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RecyclerViewMatcher.iml" filepath="$PROJECT_DIR$/RecyclerViewMatcher.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/recyclerviewmatcher/recyclerviewmatcher.iml" filepath="$PROJECT_DIR$/recyclerviewmatcher/recyclerviewmatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RecyclerViewMatcher.iml" filepath="$PROJECT_DIR$/.idea/modules/RecyclerViewMatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RecyclerViewMatcher.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RecyclerViewMatcher.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recyclerviewmatcher/RecyclerViewMatcher.recyclerviewmatcher.iml" filepath="$PROJECT_DIR$/.idea/modules/recyclerviewmatcher/RecyclerViewMatcher.recyclerviewmatcher.iml" />
     </modules>
   </component>
 </project>
